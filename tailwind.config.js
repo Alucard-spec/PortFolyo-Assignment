@@ -7,7 +7,8 @@ module.exports = {
     
     extend: {},
     fontFamily:{
-      'dancing':['"Dancing Script"', 'cursive']
+      'dancing':['"Dancing Script"', 'cursive'],
+      'ubuntu':['Ubuntu','sans-serif']
     }
   },
   plugins: [],
