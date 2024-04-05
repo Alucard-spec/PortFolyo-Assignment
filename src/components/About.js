@@ -19,7 +19,7 @@ const About = () => {
         fetchData()},[]);
     
   return (
-    <motion.div animate={{y:["200%","0%"],transition:{duration:1,delay:0.1}}}  className='bg-[#ece7e1] p-10 space-y-10 h-[100%] '>
+    <motion.div animate={{y:["200%","0%"],transition:{duration:1,delay:0.2}}}  className='bg-[#ece7e1] p-10 space-y-10 h-[100%] '>
         
         
        <div className='flex justify-evenly items-center'>
@@ -34,7 +34,7 @@ const About = () => {
 
         <div className='font-dancing text-sm lg:text-3xl md:text-2xl flex flex-col sm:flex-row w-fit justify-between md:w-[70%] mx-auto gap-2'><motion.div initial={{scale:0}} animate={{scale:1}} transition={{delay:1,duration:0.3}} className='border-black border-2 text-center lg:border-4 rounded-xl p-[2px] md:p-1 lg:p-2  '>Worked on <span className='text-red-500 '>{data?.user.about.some_total}</span> projects </motion.div> <motion.div initial={{scale:0}} animate={{scale:1}} transition={{delay:1.2,duration:0.3}} className='border-black border-2 text-center lg:border-4 rounded-xl md:p-1 lg:p-2 p-[2px] '> Have <span className='text-red-500 font-bold'>{data?.user.about.exp_year}</span> years of experience </motion.div> </div>
 
-        
+        <div className='lg:text-5xl md:text-3xl text-xl font-extrabold font-dancing w-fit mx-auto '> "{data?.user.about.quote}"</div>
 
        </motion.div>
     
