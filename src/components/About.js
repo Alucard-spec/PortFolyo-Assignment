@@ -39,6 +39,14 @@ const About = () => {
          <div className='z-10 font-dancing text-sm lg:text-3xl md:text-2xl flex flex-col sm:flex-row w-fit justify-between md:w-[70%] mx-auto gap-2'><motion.div initial={{scale:0}} animate={{scale:1}} transition={{delay:1,duration:0.3}} className='border-black border-2 text-center lg:border-4 rounded-xl z-10 p-[2px] md:p-1 lg:p-2  '>Worked on <span className='text-red-500 '>{data?.user.about.some_total}</span> projects </motion.div> <motion.div initial={{scale:0}} animate={{scale:1}} transition={{delay:1.2,duration:0.3}} className='border-black z-10 border-2 text-center lg:border-4 rounded-xl md:p-1 lg:p-2 p-[2px] '> Have <span className='text-red-500 font-bold'>{data?.user.about.exp_year}</span> years of experience </motion.div> </div>
  
          <motion.div animate={{opacity:['0%','100%']}} transition={{duration:0.8,delay:1.2}} className='lg:text-5xl z-10 md:text-3xl text-xl font-extrabold font-dancing w-fit mx-auto '> "{data?.user.about.quote}"</motion.div>
+         <div className='text-xl font-ubuntu font-bold text-center'>Connect With Me </div>
+         <div className='text-xl  flex flex-wrap justify-evenly'>{data?.user.social_handles.map((item)=>{
+                return <div className='h-9 w-9 border-black border-2 '>
+                    <div ><a href={item.url}><img src={item.image.url} className='object-cover' alt="" /></a></div>
+                    <div ></div>
+                </div>
+         })} </div>
+
          </div>
          </div>
     
