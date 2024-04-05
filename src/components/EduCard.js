@@ -4,12 +4,12 @@ import {motion} from 'framer-motion';
 
 const Card = ({datas}) => {
   return (
-    <motion.div animate={{opacity:['0%','100%']}} transition={{delay:1.5,duration:0.5}} className={datas?.enabled===false?"hidden":datas?.forEducation===false?"hidden":"font-ubuntu"}>
-        <div className='max-w-[400px] md:min-w-[300px] lg:min-w-[400px] md:p-3 p-1 my-2 md:m-3 border-t-2 border-black border-b-2 md:text-xl space-y-3'>
+    <motion.div animate={{opacity:['0%','100%']}} transition={{delay:1,duration:0.5}} className={datas?.enabled===false?"hidden":datas?.forEducation===false?"hidden":"font-ubuntu z-10"}>
+        <div className='max-w-[400px] md:min-w-[300px] lg:min-w-[400px] z-10 md:p-3 p-1 my-2 md:m-3 border-t-2 border-black border-b-2 md:text-xl space-y-3'>
 
             
  
-        <div className='font-bold text-red-500 '>{datas?.company_name}</div>
+        <div className='font-bold  underline '>{datas?.company_name}</div>
         <div className='text-sm md:text-base'> <span className='font-semibold md:text-xl'>Role - </span>{datas?.jobTitle}</div>
         <div className='text-sm md:text-base'> {datas?.startDate.substring(0,10)} <span className='font-bold '> to </span> {datas?.endDate.substring(0,10)}</div>
         <div className={datas?.summary.length===0?"hidden":'font-semibold '}> Summary</div>

@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 
 const Card = ({datas}) => {
   return (
-    <motion.div animate={{opacity:['0%','100%']}} transition={{delay:1.5,duration:0.5}} className={datas?.enabled===false?"hidden":datas?.forEducation===true?"hidden":"font-ubuntu"}>
+    <motion.div animate={{opacity:['0%','100%']}} transition={{delay:1,duration:0.5}} className={datas?.enabled===false?"hidden":datas?.forEducation===true?"hidden":"font-ubuntu z-10"}>
         <div className='max-w-[400px] md:min-w-[300px] lg:min-w-[400px] md:p-3 p-1 my-2 md:m-3 border-t-2 border-black border-b-2 md:text-xl space-y-3'>
 
             
