@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {motion} from "framer-motion";
+import TestimonialSlide from './TestimonialSlide';
 
 
 const Testimonials = () => {
@@ -25,7 +26,9 @@ const Testimonials = () => {
 
        </motion.div>
        <div className='p-10 space-y-10 '> 
-       <motion.div  animate={{y:['-100%','0%'],opacity:['0%',"100%"]}} transition={{delay:1,duration:0.5}} className='lg:text-7xl text-4xl md:text-5xl font-ubuntu font-extrabold  '>Testimonials</motion.div> </div>
+       <motion.div  animate={{y:['-100%','0%'],opacity:['0%',"100%"]}} transition={{delay:1,duration:0.5}} className='lg:text-7xl text-4xl md:text-5xl font-ubuntu font-extrabold text-center '>Testimonials</motion.div> 
+       <TestimonialSlide items={data?.user.testimonials} interval={4000}/>
+       </div>
        </div>
   )
 }
