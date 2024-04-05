@@ -5,5 +5,11 @@
 
 :root{
     background-color:#000;
+    -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+:root::-webkit-scrollbar {
+    display: none;
+  }
 
